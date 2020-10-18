@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
-import {ButtonModule} from 'primeng/button';
-import {MenubarModule} from 'primeng/menubar';
+import { PrimeModule} from 'src/app/prime-ng/prime.module';
+
 import { NavComponent } from './components/nav/nav.component';
+
+import { SharedModule } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { NavComponent } from './components/nav/nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule,
-    MenubarModule
+    PrimeModule,
+    SharedModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
