@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-
   loggedInUser: string;
 
   items: MenuItem[];
@@ -19,7 +17,7 @@ export class NavComponent implements OnInit {
       {
         label: 'Dashboard',
         icon: 'pi pi-fw pi-eye',
-        routerLink: '/dashboard'
+        routerLink: '/dashboard',
       },
       {
         label: 'Events',
@@ -28,14 +26,14 @@ export class NavComponent implements OnInit {
           {
             label: 'Event Table',
             icon: 'pi pi-fw pi-table',
-            routerLink: "/events"
+            routerLink: '/events',
           },
           {
             label: 'Add Events',
             icon: 'pi pi-fw pi-calendar-plus',
-            routerLink: '/events/add-event'
+            routerLink: '/events/add-event',
           },
-        ]
+        ],
       },
       {
         label: 'Volunteers',
@@ -44,16 +42,14 @@ export class NavComponent implements OnInit {
           {
             label: 'Volunteer Table',
             icon: 'pi pi-fw pi-table',
-            routerLink: '/volunteers'
-
+            routerLink: '/volunteers',
           },
           {
             label: 'Add Volunteer',
             icon: 'pi pi-fw pi-user-plus',
-            routerLink: '/volunteers/add-volunteer'
-
+            routerLink: '/volunteers/add-volunteer',
           },
-        ]
+        ],
       },
       {
         label: 'Settings',
@@ -62,11 +58,10 @@ export class NavComponent implements OnInit {
           {
             label: 'Family ID',
             icon: 'pi pi-fw pi-key',
-            routerLink: '/family-id'
+            routerLink: '/family-id',
           },
-        ]
-      }
+        ],
+      },
     ];
   }
-
 }

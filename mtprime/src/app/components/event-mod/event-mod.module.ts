@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TableModModule } from '../table-mod/table-mod.module';
+
 import { EventModRoutingModule } from './event-mod-routing.module';
 import { EventsComponent } from './events/events.component';
 import { AddEventComponent } from './events/add-event/add-event.component';
@@ -8,12 +10,14 @@ import { DeleteEventComponent } from './events/delete-event/delete-event.compone
 import { DetailEventComponent } from './events/detail-event/detail-event.component';
 import { EditEventComponent } from './events/edit-event/edit-event.component';
 
-
 @NgModule({
-  declarations: [EventsComponent, AddEventComponent, DeleteEventComponent, DetailEventComponent, EditEventComponent],
-  imports: [
-    CommonModule,
-    EventModRoutingModule
-  ]
+  declarations: [
+    EventsComponent,
+    AddEventComponent,
+    DeleteEventComponent,
+    DetailEventComponent,
+    EditEventComponent,
+  ],
+  imports: [CommonModule, EventModRoutingModule, TableModModule],
 })
-export class EventModModule { }
+export class EventModModule {}

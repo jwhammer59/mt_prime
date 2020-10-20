@@ -1,0 +1,19 @@
+<p>event-table works!</p>
+<p-table [value]="events">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Type</th>
+      <th>Date</th>
+      <th>Details</th>
+      <th>Event Is Full</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-event>
+    <tr>
+      <td>{{ event.type }}</td>
+      <td>{{ event.date }}</td>
+      <td><button>Details</button></td>
+      <td><p-checkbox disabled></p-checkbox></td>
+    </tr>
+  </ng-template>
+</p-table>
